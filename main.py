@@ -14,9 +14,6 @@ def get_drvier():
   driver.get("http://automated.pythonanywhere.com")
   return driver
 
-def main():
-  driver = get_drvier()
-  element = driver.find_element(by="xpath", value="/html/body/div[1]/div/h1[1]")
-  return element.text
-
-print(main())
+driver = get_drvier()
+element = driver.find_element(by="xpath", value="/html/body/div[1]/div/h1[1]")
+print(element.text)
